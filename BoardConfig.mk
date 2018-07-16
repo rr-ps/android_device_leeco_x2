@@ -24,7 +24,7 @@
 # inherit from msm8996-common
 -include device/leeco/msm8996-common/BoardConfigCommon.mk
 
-TARGET_OTA_ASSERT_DEVICE := le_x2,LeMax2_CN,LeMax2_NA
+TARGET_OTA_ASSERT_DEVICE := le_x2,le_x2_india,le_x2_na,LeMax2_CN,LeMax2_NA,LeMax2_WW,LeMax2
 
 DEVICE_PATH := device/leeco/x2
 
@@ -42,9 +42,6 @@ BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 else
 TARGET_KERNEL_CONFIG := lineage_x2_defconfig
 endif
-
-# Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 
 # Partitions
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3154116608
