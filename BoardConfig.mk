@@ -78,4 +78,5 @@ TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_EXCLUDE_SUPERSU := true
 TW_EXTRA_LANGUAGES := true
 TW_INCLUDE_NTFS_3G := true
+TW_INCLUDE_SGDISK := true
 TW_THEME := portrait_hdpi
