@@ -1,15 +1,14 @@
 TWRP device configuration for LeEco Le Max 2
 ==============
 
-kernel source used for prebuilt kernel:
-https://github.com/LineageOS/android_kernel_leeco_msm8996/tree/lineage-15.1
+Uses a lighter version of Lambda Kernel, specially slimmed down for recovery usage.
+
+Source code is available at: https://github.com/GalaticStryder/android_kernel_leeco_msm8996
 
 
-To compile android-8.1 based TWRP
+To compile android-8.1 based TWRP:
 ==============
 
-export ALLOW_MISSING_DEPENDENCIES=true
-
-. build/envsetup.sh && lunch omni_x2-eng
-
-mka adbd recoveryimage
+curl https://gist.githubusercontent.com/GalaticStryder/a073b0b4acf704962849ee3018681b19/raw/fc848dddaf249fa239461a02144abc2189ff05e9/mka_recovery.sh -o mka_recovery.sh
+chmod a+x mka_recovery.sh
+./mka_recovery.sh x2
