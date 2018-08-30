@@ -63,5 +63,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
     $(LOCAL_PATH)/sensors/sensor_def_qcomdev.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_def_qcomdev.conf
 
+# Use daemon to detect folio open/close
+PRODUCT_PACKAGES += \
+    folio_daemon
+
 # msm8996-common
 $(call inherit-product, device/leeco/msm8996-common/msm8996.mk)

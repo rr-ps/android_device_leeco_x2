@@ -40,3 +40,19 @@ persist.qfp.eeprom=/sys/bus/i2c/devices/8-0051/eeprom
 
 # Radio
 persist.radio.multisim.config=dsds
+
+
+debug.composition.type=gpu
+debug.overlayui.enable=1
+debug.performance.tuning=1
+debug.sf.latch_unsignaled=1
+hw3d.force=1
+hwui.disable_vsync=1
+hwui.render_dirty_regions=false
+ro.config.disable.hw_accel=false
+ro.fb.mode=1
+ro.product.gpu.driver=1
+ro.sf.compbypass.enable=0
+
+
+

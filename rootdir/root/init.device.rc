@@ -138,6 +138,30 @@ service qfp-daemon /vendor/bin/qfp-daemon
     class late_start
     user system
     group system drmrpc diag input sdcard_rw
+    capabilities BLOCK_SUSPEND
 
 on property:init.svc.bootanim=running
     write /sys/class/leds/wled/brightness 122
+
+service folio_daemon /system/bin/folio_daemon
+    class late_start
+    user system
+    group system diag input
+    writepid /dev/cpuset/system-background/tasks
+    capabilities BLOCK_SUSPEND
+    disabled
+
+on property:persist.sys.hall_sensor=1
+    start folio_daemon
+
+on property:persist.sys.hall_sensor=0
+    stop folio_daemon
+
+#on property:persist.qfp=0
+#    stop qfp-daemon
+#    stop fps_hal
+
+#on property:persist.qfp=1
+#    start fps_hal
+#    start qfp-daemon
+
