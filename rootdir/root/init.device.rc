@@ -157,11 +157,12 @@ on property:persist.sys.hall_sensor=1
 on property:persist.sys.hall_sensor=0
     stop folio_daemon
 
-#on property:persist.qfp=0
-#    stop qfp-daemon
-#    stop fps_hal
+on property:persist.qfp=false
+    stop qfp-daemon
+    stop fps_hal
 
-#on property:persist.qfp=1
-#    start fps_hal
-#    start qfp-daemon
+on property:persist.qfp=true
+    start qfp-daemon
+    start fps_hal
+
 
