@@ -31,7 +31,7 @@ DEVICE_PATH := device/leeco/x2
 TARGET_SPECIFIC_HEADER_PATH += $(DEVICE_PATH)/include
 
 # Kernel
-BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom ehci-hcd.park=3 lpm_levels.sleep_disabled=1 cma=32M@0-0xffffffff androidboot.selinux=permissive log_buf_len=8M
+BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom sched_enable_hmp=1 sched_enable_power_aware=1 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 cma=32M@0-0xffffffff androidboot.selinux=permissive log_buf_len=8M
 BOARD_KERNEL_CMDLINE += androidboot.configfs=true
 BOARD_KERNEL_TAGS_OFFSET := 0x02000000
 BOARD_RAMDISK_OFFSET     := 0x02200000

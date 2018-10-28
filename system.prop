@@ -26,16 +26,16 @@ persist.qfp.touch_enabled=0
 persist.qfp.home_btn_enabled=0
 persist.qfp.lift_fdwait=250
 persist.qfp.match_tmout=1000
-persist.qfp.reset_lt_ms=600000
+persist.qfp.reset_lt_ms=60000
 persist.qfp.lfdr_reset_allow=1
-persist.qfp.nomatchlt_count=3
+persist.qfp.nomatchlt_count=1
 persist.qfp.nomatch_max=3
 
 persist.qfp.wup_display=1
 
 persist.qfp.ssc_fgoff_dil_s1=10
 persist.qfp.ssc_fgoff_dil_home=10
-persist.qfp.ssc_poll_low_rate=500
+persist.qfp.ssc_poll_low_rate=3000
 persist.qfp.ssc_poll_rate=100
 
 persist.qfp.ssc_thresh_s1=0.520
