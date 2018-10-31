@@ -139,7 +139,6 @@ service qfp-daemon /vendor/bin/qfp-daemon
     user system
     group system drmrpc diag input sdcard_rw
     writepid /dev/cpuset/system-background/tasks
-    writepid /dev/cpuctl/bg_non_interactive/tasks
     capabilities BLOCK_SUSPEND
 
 on property:init.svc.bootanim=running
@@ -150,7 +149,6 @@ service folio_daemon /system/bin/folio_daemon
     user system
     group system diag input
     writepid /dev/cpuset/system-background/tasks
-    writepid /dev/cpuctl/bg_non_interactive/tasks
     capabilities BLOCK_SUSPEND
     disabled
 
